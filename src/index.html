@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transport and Logistics</title>
+
+    <link rel="stylesheet" href="output.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header top -->
+    <div
+      class="hidden lg:flex header_top bg-[#f68b21] text-white hiddden p-4 justify-between"
+    >
+      <div class="header-top-info">
+        <ul class="flex gap-5">
+          <li>
+            <a href="#">
+              <i class="bi bi-geo-alt-fill"></i> Location : 12 Main Road, CA
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-envelope"></i> Email : logistic@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-clock"></i> Office Time : Mon - Fri 8:00 - 6:30
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="flex gap-4">
+          <span>Follow Us:</span>
+          <li>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- md screen header -->
+
+    <div class="mobile-header lg:hidden block bg-[#003d4d] px-5 py-5">
+      <div class="flex justify-between items-center">
+        <div class="md:w-full w-[50%]">
+          <img src="../images/logo/ts_logo.png" alt="logo not found" />
+        </div>
+        <div
+          class="text-[#f68b21] md:text-4xl text-2xl cursor-pointer"
+          onclick="toggleNav()"
+        >
+          <i class="bi bi-list"></i>
+        </div>
+      </div>
+
+      <div
+        class="mobile-menu hidden fixed top-0 right-0 h-screen bg-[#003d4d] md:w-1/2 w-full z-10"
+      >
+        <div class="logo-container flex justify-between mx-10 pt-10 pb-5">
+          <div class="w-[50%]">
+            <img src="../images/logo/ts_logo.png" alt="logo not found" />
+          </div>
+          <div
+            class="close text-white text-3xl cursor-pointer z-20"
+            onclick="toggleNav()"
+          >
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+
+        <div class="px-10 text-white text-base font-bold">
+          <ul>
+            <li class="menu-item">
+              <div class="main-link-container pt-5">
+                <a href="#">Home</a>
+                <div
+                  class="menu-expand cursor-pointer"
+                  onclick="toggleSubMenu(this)"
+                >
+                  +
+                </div>
+              </div>
+              <ul class="sub-menu">
+                <li><a href="#">Home One</a></li>
+                <li><a href="#">Home Two</a></li>
+                <li><a href="#">Home Dark</a></li>
+                <li><a href="#">Home Dark Two</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="main-link-container">About</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="main-link-container">Services</a>
+            </li>
+            <li class="menu-item">
+              <div class="main-link-container">
+                <a href="#">Pages</a>
+                <a
+                  class="menu-expand cursor-pointer z-20"
+                  onclick="toggleSubMenu(this)"
+                  >+</a
+                >
+              </div>
+              <ul class="sub-menu">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Service Details</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Team Details</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Project Details</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">404 Page</a></li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <div class="main-link-container">
+                <a href="#">News</a>
+                <a
+                  class="menu-expand cursor-pointer"
+                  onclick="toggleSubMenu(this)"
+                  >+</a
+                >
+              </div>
+              <ul class="sub-menu">
+                <li><a href="#">Blog Standard</a></li>
+                <li><a href="#">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-last">
+              <a href="#" class="main-link-container">Contacts</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-10">
+          <h4 class="mb-4 text-white text-xl font-bold">
+            Subscribe &amp; Follow
+          </h4>
+          <ul class="menu-social flex gap-4">
+            <li>
+              <i class="bi bi-facebook text-white"></i>
+            </li>
+            <li>
+              <i class="bi bi-twitter text-white"></i>
+            </li>
+            <li>
+              <i class="bi bi-pinterest text-white"></i>
+            </li>
+            <li>
+              <i class="bi bi-vimeo text-white"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="header-menu-area relative bg-[#d1e4ea] py-6 hidden lg:block">
+        <div class="logo-overlay relative"></div>
+        <div class="flex justify-between">
+          <div class="relative z-10 max-w-[100%]">
+            <img src="../images/logo/ts_logo.png" alt="logo not found" />
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="relative inline-block text-center">
+              <nav class="main__menu block" id="mobile-menu">
+                <ul>
+                  <li>
+                    <a href="#"> Home <i class="bi bi-chevron-down"></i> </a>
+                    <ul class="sub__menu">
+                      <li><a href="#">Home One</a></li>
+                      <li><a href="#">Home Two</a></li>
+                      <li><a href="#">Home Dark</a></li>
+                      <li>
+                        <a href="i#">Home Dark Two</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#"> About </a></li>
+                  <li><a href="#"> Services </a></li>
+                  <li>
+                    <a href="#"> Pages <i class="bi bi-chevron-down"></i> </a>
+                    <ul class="sub__menu">
+                      <li><a href="#">Services</a></li>
+                      <li>
+                        <a href="#">Service Details</a>
+                      </li>
+                      <li><a href="#">Team</a></li>
+                      <li>
+                        <a href="#">Team Details</a>
+                      </li>
+                      <li><a href="#">Project</a></li>
+                      <li>
+                        <a href="#">Project Details</a>
+                      </li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">404 Page</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"> News <i class="bi bi-chevron-down"></i> </a>
+                    <ul class="sub__menu">
+                      <li>
+                        <a href="#">Blog Standard</a>
+                      </li>
+                      <li>
+                        <a href="#">Blog Details</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#"> Contacts </a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="inline-block">
+              <div class="flex items-center relative z-10 gap-3">
+                <div class="contact-icon">
+                  <a href="tel:+562015550124">
+                    <i class="bi bi-telephone"></i>
+                  </a>
+                </div>
+                <div class="text-base font-bold text-white mr-10">
+                  <span class="block">Emergency</span>
+                  +56 (201) 555-0111
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="swiper mySwiper relative">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide bg-center bg-cover bg-no-repeat"
+          style="background-image: url('../images/slider/carousel1.webp')"
+        >
+          <div class="slider-content md:p-16 p-10 lg:p-28">
+            <h5
+              class="inline-block relative md:text-2xl text-base text-white ml-9"
+            >
+              We excel in providing top-notch transportation services
+            </h5>
+            <h1 class="text-white lg:text-5xl text-2xl font-bold py-3">
+              Discover Premier Logistics & Transport Services
+            </h1>
+            <p class="text-white md:text-base text-sm md:w-[50%]">
+              Our logistics and transportation services are designed to meet all
+              your needs efficiently and reliably.
+            </p>
+            <a class="btn1 mt-5" href="#">
+              More Details <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide bg-center bg-cover bg-no-repeat"
+          style="background-image: url('../images/slider/truck_carousel.jpg')"
+        >
+          <div class="slider-content p-10 lg:p-20">
+            <h5
+              class="inline-block relative md:text-2xl text-xl text-white ml-9"
+            >
+              We excel in providing top-notch transportation services
+            </h5>
+            <h1 class="text-white lg:text-5xl text-2xl font-bold py-3">
+              Discover Premier Logistics & Transport Services
+            </h1>
+            <p class="text-white text-base md:w-[50%]">
+              Our logistics and transportation services are designed to meet all
+              your needs efficiently and reliably.
+            </p>
+            <a class="btn1 mt-5" href="#">
+              More Details <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="swiper-slide bg-center bg-cover bg-no-repeat"
+          style="background-image: url('../images/slider/carousel2.png')"
+        >
+          <div class="slider-content p-10 lg:p-20">
+            <h5
+              class="inline-block relative md:text-2xl text-xl text-white ml-9"
+            >
+              We excel in providing top-notch transportation services
+            </h5>
+            <h1 class="text-white lg:text-5xl text-2xl font-bold py-3">
+              Discover Premier Logistics & Transport Services
+            </h1>
+            <p class="text-white text-base md:w-[50%]">
+              Our logistics and transportation services are designed to meet all
+              your needs efficiently and reliably.
+            </p>
+            <a class="btn1 mt-5" href="#">
+              More Details <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        >
+      </div>
+      <div class="swiper-nav hidden md:inline-block">
+        <div class="button-next"><i class="bi bi-chevron-left"></i></div>
+        <div class="button-prev"><i class="bi bi-chevron-right"></i></div>
+      </div>
+    </div>
+
+    <!-- Feature  -->
+
+    <div class="feature-area overflow-hidden relative items-center mb-40 gap-4">
+      <div class="swiper2 justify-center hidden lg:flex">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide feature">
+            <div class="feature_icon">
+              <img src="../images/feature/icon3.png" alt="" />
+            </div>
+            <div class="feature-content">
+              <h2>Inventory Management</h2>
+              <p>
+                Maintain accurate and real-time inventory levels to ensure
+                optimal stock availability.
+              </p>
+            </div>
+            <span class="line"></span>
+          </div>
+          <div class="swiper-slide feature">
+            <div class="feature_icon">
+              <img src="../images/feature/icon2.png" alt="" />
+            </div>
+            <div class="feature-content">
+              <h2>Order Fulfillment</h2>
+              <p>
+                Efficiently process and fulfill orders to meet customer demands
+                quickly and accurately.
+              </p>
+            </div>
+            <span class="line"></span>
+          </div>
+          <div class="swiper-slide feature">
+            <div class="feature_icon">
+              <img src="../images/feature/icon3.png" alt="" />
+            </div>
+            <div class="feature-content">
+              <h2>Inventory Management</h2>
+              <p>
+                Maintain accurate and real-time inventory levels to ensure
+                optimal stock availability.
+              </p>
+            </div>
+            <span class="line"></span>
+          </div>
+
+          <div class="swiper-slide feature">
+            <div class="feature_icon">
+              <img src="../images/feature/icon2.png" alt="" />
+            </div>
+            <div class="feature-content">
+              <h2>Order Fulfillment</h2>
+              <p>
+                Efficiently process and fulfill orders to meet customer demands
+                quickly and accurately.
+              </p>
+            </div>
+            <span class="line"></span>
+          </div>
+
+          <div class="swiper-slide feature">
+            <div class="feature_icon">
+              <img src="../images/feature/icon3.png" alt="" />
+            </div>
+            <div class="feature-content">
+              <h2>Inventory Management</h2>
+              <p>
+                Maintain accurate and real-time inventory levels to ensure
+                optimal stock availability.
+              </p>
+            </div>
+            <span class="line"></span>
+          </div>
+          <div class="swiper-slide feature">
+            <div class="feature_icon">
+              <img src="../images/feature/icon3.png" alt="" />
+            </div>
+            <div class="feature-content">
+              <h2>Order Fulfillment</h2>
+              <p>
+                Efficiently process and fulfill orders to meet customer demands
+                quickly and accurately.
+              </p>
+            </div>
+            <span class="line"></span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="feature-button absolute top-1/2 transform -translate-y-1/2 lg:flex justify-between w-full z-10 hidden"
+      >
+        <div class="feature-button-next ml-10">
+          <i class="bi bi-arrow-left"></i>
+        </div>
+        <div class="feature-button-prev mr-10">
+          <i class="bi bi-arrow-right"></i>
+        </div>
+      </div>
+
+      <!-- for mid and less -->
+      <div class="lg:hidden flex gap-4 mx-10 top-0">
+        <div class="feature top-0">
+          <div class="feature_icon">
+            <img src="../images/feature/icon2.png" alt="" />
+          </div>
+          <div class="feature-content">
+            <h2>Order Fulfillment</h2>
+            <p>
+              Efficiently process and fulfill orders to meet customer demands
+              quickly and accurately.
+            </p>
+          </div>
+          <span class="line"></span>
+        </div>
+        <div class="feature md:inline-block hidden">
+          <div class="feature_icon">
+            <img src="../images/feature/icon3.png" alt="" />
+          </div>
+          <div class="feature-content">
+            <h2>Inventory Management</h2>
+            <p>
+              Maintain accurate and real-time inventory levels to ensure optimal
+              stock availability.
+            </p>
+          </div>
+          <span class="line"></span>
+        </div>
+        <div class="feature md:inline-block hidden">
+          <div class="feature_icon">
+            <img src="../images/feature/icon2.png" alt="" />
+          </div>
+          <div class="feature-content">
+            <h2>Order Fulfillment</h2>
+            <p>
+              Efficiently process and fulfill orders to meet customer demands
+              quickly and accurately.
+            </p>
+          </div>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="feature-bottom text-center m-10 md:m-20 text-xl">
+        <span class="text-white"
+          >This is just the beginning. Discover how we can support you and your
+          business. <a class="text-[#f68b21]"> More Services </a>
+        </span>
+      </div>
+    </div>
+
+    <!-- About Area -->
+    <div class="about-area lg:flex mx-10 my-10 gap-8">
+      <div class="lg:flex-1">
+        <div class="about-img">
+          <img src="../images/about/about.png" alt="" />
+        </div>
+      </div>
+
+      <div class="lg:flex-1">
+        <div class="section-title mt-5 lg:mt-0">
+          <span class="circle"></span>
+          <h5>About The Company</h5>
+          <span class="circle"></span>
+          <h1 class="md:text-5xl text-3xl font-bold">
+            Excellence in Every Logistic Solution
+          </h1>
+          <p>
+            Our logistics services ensure timely and efficient delivery, meeting
+            all your business needs with precision and reliability.
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-iconbox md:flex mb-5">
+            <div class="about-icon">
+              <img src="../images/about/icon1.png" alt="" />
+            </div>
+            <div class="about-icon-content">
+              <h3>Live Tracking</h3>
+              <p>
+                Monitor your shipments in real-time with our advanced live
+                tracking system, ensuring transparency and peace of mind.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-btn mr-5">
+            <a class="btn2" href="#">
+              More Details <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+          <div class="about-infometa md:mt-0 mt-10">
+            <div class="iconmeta-inner flex">
+              <div class="about-info-icon">
+                <a href="tel:+562015550124">
+                  <i class="bi bi-telephone"></i>
+                </a>
+              </div>
+              <div class="about-info-content">
+                <span>Emergency</span>
+                +56 (201) 555-0124
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Area -->
+    <div class="service-area mt-20 py-10">
+      <div class="section-title mb-4 text-center">
+        <span class="circle"></span>
+        <h5>Logistics Categories</h5>
+        <span class="circle"></span>
+
+        <h1 class="md:text-5xl text-3xl font-bold">
+          Essential Logistics Services
+        </h1>
+      </div>
+
+      <div class="flex flex-wrap justify-center">
+        <div class="lg:w-1/3 md:w-1/2">
+          <div class="m-5">
+            <div class="service-box">
+              <div class="service-image relative overflow-hidden">
+                <img src="../images/service/project1.jpg" alt="" />
+                <div class="service-icon">
+                  <img src="../images/service/services_icon1.png" alt="" />
+                </div>
+              </div>
+              <div class="service-content">
+                <span> Tracking </span>
+                <h2><a href="#"> Transport by Road </a></h2>
+                <div class="service-btn">
+                  <a href="#">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/2">
+          <div class="m-5">
+            <div class="service-box">
+              <div class="service-image">
+                <img src="../images/service/project2.jpg" alt="" />
+                <div class="service-icon">
+                  <img src="../images/service/services_icon2.png" alt="" />
+                </div>
+              </div>
+              <div class="service-content">
+                <span> Tracking </span>
+                <h2><a href="#"> Safety Garunteed </a></h2>
+                <div class="service-btn">
+                  <a href="#"> <i class="bi bi-arrow-right"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/2">
+          <div class="m-5">
+            <div class="service-box">
+              <div class="service-image">
+                <img src="../images/service/project3.jpg" alt="" />
+                <div class="service-icon">
+                  <img src="../images/service/services_icon3.png" alt="" />
+                </div>
+              </div>
+              <div class="service-content">
+                <span> Tracking </span>
+                <h2><a href="#"> Managing Logistic</a></h2>
+                <div class="service-btn">
+                  <a href="#"> <i class="bi bi-arrow-right"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Area -->
+    <div class="testimonial-area mt-32 pb-5">
+      <div class="section-title mb-5 text-center">
+        <span class="circle"></span>
+        <h5>What Our Client Says</h5>
+        <span class="circle"></span>
+        <h1 class="md:text-5xl text-3xl font-bold">User Success Stories</h1>
+      </div>
+      <div class="flex flex-wrap justify-center">
+        <div class="lg:w-1/3 md:w-1/2">
+          <div class="m-5">
+            <div class="testimonial-box relative">
+              <div class="testimonial-box-inner flex">
+                <img src="../images/testimonial/t1.png" alt="" />
+
+                <div class="testimonial-content">
+                  <h2>Nathan Carter</h2>
+                  <span>Dramatical enhance</span>
+                </div>
+              </div>
+              <div class="testimonial-description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse
+                </p>
+              </div>
+              <div class="testimonial-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/3 md:w-1/2">
+          <div class="m-5">
+            <div class="testimonial-box relative">
+              <div class="testimonial-box-inner flex">
+                <img src="../images/testimonial/t2.png" alt="" />
+
+                <div class="testimonial-content">
+                  <h2>Emily Johnson</h2>
+                  <span>Dramatical enhance</span>
+                </div>
+              </div>
+              <div class="testimonial-description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse
+                </p>
+              </div>
+              <div class="testimonial-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2">
+          <div class="m-5">
+            <div class="testimonial-box relative">
+              <div class="testimonial-box-inner flex">
+                <img src="../images/testimonial/t3.png" alt="" />
+
+                <div class="testimonial-content">
+                  <h2>Darrell Thompson</h2>
+                  <span>Dramatical enhance</span>
+                </div>
+              </div>
+              <div class="testimonial-description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse
+                </p>
+              </div>
+              <div class="testimonial-icon">
+                <i class="bi bi-quote"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appointment Area -->
+    <div class="appointment-area pt-24 relative mt-24">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12 lg:col-span-9">
+            <div class="contact-inner">
+              <div class="contact-position p-10">
+                <div class="">
+                  <h5 class="text-white text-xl font-bold">
+                    Booking Appointment
+                  </h5>
+                  <h1
+                    class="text-white text-4xl lg:text-5xl font-bold pt-2 pb-5"
+                  >
+                    Book Transport &amp; Logistics
+                  </h1>
+                </div>
+                <form
+                  action="#"
+                  method="#"
+                  class="grid grid-cols-1 lg:grid-cols-2 gap-4"
+                >
+                  <div class="">
+                    <div class="form-box relative">
+                      <input type="text" name="name" placeholder="Full Name*" />
+                      <i class="bi bi-person-fill"></i>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="form-box relative">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Here*"
+                      />
+                      <i class="bi bi-envelope-open"></i>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="form-box relative">
+                      <input
+                        type="text"
+                        name="text"
+                        placeholder="Weight. Kg*"
+                      />
+                      <i class="bi bi-bag"></i>
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="form-box relative">
+                      <input
+                        type="text"
+                        name="text"
+                        placeholder="Distance. km*"
+                      />
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                  </div>
+                </form>
+                <div class="">
+                  <div class="form-box relative">
+                    <div class="nice-select" tabindex="0">
+                      <span class="current">Select Freight</span>
+                      <ul class="list p-5">
+                        <li data-value="1" class="option selected">
+                          Select Freight
+                        </li>
+                        <li data-value="2" class="option">Air Freight</li>
+                        <li data-value="3" class="option">Sea Freight</li>
+                        <li data-value="4" class="option">Road Freight</li>
+                      </ul>
+                      <i class="bi bi-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="form-box">
+                    <button type="submit" class="btn1">
+                      Request Quote <i class="bi bi-arrow-right ml-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-3"></div>
+        </div>
+      </div>
+      <div class="appointment-bg">
+        <img src="../images/appointment/bg.jpeg" alt="" />
+      </div>
+      <div class="appointment-shape1 lg:block hidden">
+        <img src="../images/appointment/shape.png" alt="" />
+      </div>
+      <div class="appointment-video lg:block hidden">
+        <a href="" class="video-icon">
+          <i class="bi bi-play"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Area -->
+    <div class="project-area my-40">
+      <div class="section-title text-center mb-12">
+        <span class="circle"></span>
+        <h5>Delivering Results</h5>
+        <span class="circle"></span>
+        <h1 class="md:text-5xl text-3xl font-bold">
+          Delivering Excellence with Pride
+        </h1>
+      </div>
+
+      <div class="flex flex-wrap">
+        <div class="lg:w-1/3 md:w-1/2 flex">
+          <div class="m-5">
+            <div class="project-single relative flex flex-col">
+              <div class="project-img flex-grow">
+                <img src="../images/projects/p1.jpg" alt="" />
+                <div class="project-content">
+                  <h2><a href="#">Masters of Technological Expertise</a></h2>
+                  <span>Transportation 2024</span>
+                </div>
+                <div class="project-btn lg:inline-block hidden">
+                  <a href="#"> Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2 flex">
+          <div class="m-5">
+            <div class="project-single relative flex flex-col">
+              <div class="project-img flex-grow mb-5">
+                <img src="../images/projects/project4.jpeg" alt="" />
+                <div class="project-content">
+                  <h2><a href="#">Masters of Technological Expertise</a></h2>
+                  <span>Transportation 2024</span>
+                </div>
+                <div class="project-btn lg:inline-block hidden">
+                  <a href="#"> Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="project-single relative flex flex-col my-5">
+                <div class="project-img flex-grow">
+                  <img src="../images/projects/p3.jpg" alt="" />
+                  <div class="project-content">
+                    <h2><a href="#">Masters of Technological Expertise</a></h2>
+                    <span>Transportation 2024</span>
+                  </div>
+                  <div class="project-btn lg:inline-block hidden">
+                    <a href="#"> Details <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2 flex">
+          <div class="m-5">
+            <div class="project-single relative flex flex-col">
+              <div class="project-img flex-grow">
+                <img src="../images/projects/p4.jpg" alt="" />
+                <div class="project-content">
+                  <h2><a href="#">Masters of Technological Expertise</a></h2>
+                  <span>Transportation 2024</span>
+                </div>
+                <div class="project-btn lg:inline-block hidden">
+                  <a href="#"> Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing Area -->
+    <div class="pricing-area my-20">
+      <div class="section-title text-center mb-10">
+        <span class="circle"></span>
+        <h5>Pricing &amp; Plans</h5>
+        <span class="circle"></span>
+        <h1 class="md:text-5xl text-3xl font-bold">
+          Cost-Conscious &amp; Effective Options
+        </h1>
+      </div>
+
+      <div class="pricing-box-outer flex flex-wrap py-10 mb-6 justify-center">
+        <div class="lg:w-1/3 md:w-1/2 w-full lg:mb-0">
+          <div class="pricing-box mx-10 mb-5">
+            <div class="pricing-content">
+              <h4>Basic Plan</h4>
+              <div class="price">
+                <span class="amount"> 65 </span>
+                <span class="dollar"> $ </span>
+                <span class="month">/ Per Month</span>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul>
+                <li>1 warehouse</li>
+                <li>Custom business rules</li>
+                <li>Real-time rate shopping</li>
+                <li>100 freight shipments</li>
+                <li>Any time 24/7 hour support</li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <a href="#"> Order Now </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2 w-full lg:mb-0">
+          <div class="pricing-box mr-10 md:ml-0 ml-10 mb-5">
+            <div class="pricing-content">
+              <h4>Standard Plan</h4>
+              <div class="price">
+                <span class="amount"> 79 </span>
+                <span class="dollar"> $ </span>
+                <span class="month">/ Per Month</span>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul>
+                <li>1 warehouse</li>
+                <li>Custom business rules</li>
+                <li>Real-time rate shopping</li>
+                <li>100 freight shipments</li>
+                <li>Any time 24/7 hour support</li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <a href="#"> Order Now </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2 w-full lg:mb-0">
+          <div class="pricing-box mr-10 md:ml-0 ml-10 mb-5">
+            <div class="pricing-content">
+              <h4>Premium Plan</h4>
+              <div class="price">
+                <span class="amount"> 93 </span>
+                <span class="dollar"> $ </span>
+                <span class="month">/ Per Month</span>
+              </div>
+            </div>
+            <div class="pricing-body">
+              <ul>
+                <li>1 warehouse</li>
+                <li>Custom business rules</li>
+                <li>Real-time rate shopping</li>
+                <li>100 freight shipments</li>
+                <li>Any time 24/7 hour support</li>
+              </ul>
+            </div>
+            <div class="pricing-btn">
+              <a href="#"> Order Now </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call To Action -->
+    <div
+      class="call-do-action relative"
+      style="
+        background-image: url(../images/call-action/call_bg-2.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+      "
+    >
+      <div class="lg:w-full">
+        <div class="call-do-action-content text-center py-40">
+          <h2 class="md:text-5xl text-3xl font-bold text-white top-[-10] mb-5">
+            Looking for Premier Logistics <br />
+            and Transport Solutions?
+          </h2>
+          <a class="btn2" href="#">
+            More Details <i class="bi bi-arrow-right"></i>
+          </a>
+          <a class="btn1 ml-2" href="#">
+            Read More <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribe Area -->
+    <div class="subscribe-area">
+      <div class="sub-bg flex flex-wrap">
+        <div class="lg:w-2/4 w-full p-3">
+          <div class="subscribe-content text-center pt-10 w-full">
+            <h2 class="md:text-3xl text-2xl font-bold text-[#003d4d] mb-3">
+              Secure Your World with Our Coverage!
+            </h2>
+            <span>Not sure which policy suits you the best?</span>
+            <form action="#" method="post">
+              <div class="subscribe-form relative mt-10">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Type Your Email"
+                />
+                <button type="submit" class="md:absolute md:w-1/3 w-full">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="lg:w-2/4 w-full">
+          <div class="subscribe-img w-full ml-1">
+            <img src="../images/call-action/call2.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog area -->
+
+    <div class="blog-area">
+      <div class="section-title text-center mb-16 mt-48">
+        <span class="circle"></span>
+        <h5>Our News from Blog</h5>
+        <span class="circle"></span>
+        <h1 class="md:text-5xl text-3xl font-bold">
+          Discover the Latest Updates & Top Blog Posts
+        </h1>
+      </div>
+
+      <div class="flex flex-wrap px-4 mb-48">
+        <div class="blog-single-box lg:w-1/3 md:w-1/2 w-full p-4 lg:mb-0">
+          <div class="blog-box">
+            <div class="blog-image pb-4">
+              <img src="../images/blog/blog1.jpg" alt="" />
+            </div>
+            <div class="blog-content pb-4">
+              <div class="blog-meta-top">
+                <div class="blog-meta flex">
+                  <div class="blog-meta-img max-w-20">
+                    <img class="" src="../images/blog/dp1.png" alt="" />
+                  </div>
+                  <div class="blog-meta-content pt-4">
+                    <span>Admin</span>
+                  </div>
+                  <div class="blog-comment pt-4 ml-5">
+                    <i class="bi bi-chat"></i>
+                    <span class="text-slate-700">{6} Comments</span>
+                  </div>
+                </div>
+              </div>
+              <h2 class="pt-4 text-xl text-[#003d4d]">
+                New Additions to our great Metro trucks.
+              </h2>
+              <a class="blog-btn" href="#">
+                Read More <i class="bi bi-arrow-up-short"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2 w-full p-4 lg:mb-0">
+          <div class="blog-box">
+            <div class="blog-content mb-4">
+              <div class="blog-meta-top">
+                <div class="blog-meta flex">
+                  <div class="blog-meta-img max-w-20">
+                    <img src="../images/blog/dp1.png" alt="" />
+                  </div>
+                  <div class="blog-meta-content pt-4">
+                    <span>Admin</span>
+                  </div>
+                  <div class="blog-comment ml-5 pt-4">
+                    <i class="bi bi-chat"></i>
+                    <span class="pl-2 text-slate-700">{6} Comments</span>
+                  </div>
+                </div>
+              </div>
+              <h2 class="pt-4 text-xl text-[#003d4d]">
+                New Additions to our great Metro trucks.
+              </h2>
+              <a class="blog-btn" href="#">
+                Read More <i class="bi bi-arrow-up-short"></i
+              ></a>
+            </div>
+            <div class="blog-image pb-4">
+              <img src="../images/blog/blog2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 md:w-1/2 w-full p-4 lg:mb-0">
+          <div class="blog-box">
+            <div class="blog-image pb-4">
+              <img src="../images/blog/blog3.jpg" alt="" />
+            </div>
+            <div class="blog-content pb-4">
+              <div class="blog-meta-top">
+                <div class="blog-meta flex">
+                  <div class="blog-meta-img max-w-20">
+                    <img src="../images/blog/dp1.png" alt="" />
+                  </div>
+                  <div class="blog-meta-content pt-4">
+                    <span>Admin</span>
+                  </div>
+                  <div class="blog-comment pt-4 pl-5">
+                    <i class="bi bi-chat"></i>
+                    <span class="pl-2 text-slate-700">{6} Comments</span>
+                  </div>
+                </div>
+              </div>
+              <h2 class="pt-4 text-xl text-[#003d4d]">
+                New Additions to our great Metro trucks.
+              </h2>
+              <a class="blog-btn" href="#">
+                Read More <i class="bi bi-arrow-up-short"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brand area -->
+    <div class="my-10 brand-area mx-5">
+      <div class="text-center">
+        <h2
+          class="text-center text-2xl font-bold text-slate-700 brand-title px-3"
+        >
+          Our Trusted Brands
+        </h2>
+      </div>
+
+      <div class="flex justify-center m-6">
+        <img class="w-40 mx-5" src="../images/logo/logo.jpg" alt="" />
+        <img
+          class="w-40 mx-5 hidden md:flex"
+          src="../images/logo/logo.jpg"
+          alt=""
+        />
+        <img
+          class="w-40 mx-5 hidden md:flex"
+          src="../images/logo/logo.jpg"
+          alt=""
+        />
+        <img
+          class="w-40 mx-5 hidden md:flex"
+          src="../images/logo/logo.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div
+      class="bg-center bg-cover bg-no-repeat"
+      style="background-image: url('../images/footer/footer_bg.jpeg')"
+    >
+      <div
+        class="text-white flex justify-between p-6 pb-40 pt-20 footer-content flex-wrap"
+      >
+        <div class="lg:w-1/4 md:w-1/2 w-full mb-4 lg:mb-0">
+          <div class="footer_logo mt-4">
+            <img src="../images/logo/ts_logo.png" alt="" />
+          </div>
+          <div class="my-8 text-md pr-10">
+            <p>
+              Feugiat a ligula rutrum luctus primis ultrice nteger congue magna
+              at pretium purus a pretium ligula rutrum and luctus
+            </p>
+          </div>
+          <div class="mt-4 footer-social-info">
+            <h2 class="text-xl mb-4">Social Info</h2>
+            <a href="#"> <i class="bi bi-facebook"></i> </a>
+            <a href="#"> <i class="bi bi-twitter"></i> </a>
+            <a href="#"> <i class="bi bi-pinterest"></i> </a>
+            <a href="#"> <i class="bi bi-instagram"></i> </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 w-full mb-4 lg:mb-0">
+          <div class="footer-title relative mt-4">
+            <h2>Our Navigation</h2>
+          </div>
+          <div class="footer-link my-8">
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Airplane Fright
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> About Portx
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Meet The Team
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> News &amp; Media
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Our Projects
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 w-full mb-4 lg:mb-0">
+          <div class="footer-title relative mt-4">
+            <h2>Our Service</h2>
+          </div>
+          <div class="footer-link my-8">
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Reliability &amp;
+              Punctuality
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Trusted Franchise
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Warehoues Storage
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Real Time Tracking
+            </a>
+            <a href="#">
+              <i class="bi bi-chevron-double-right"></i> Transparent Pricing
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 w-full mb-4 lg:mb-0">
+          <div class="footer-title relative mt-4">
+            <h2>Newsletter</h2>
+          </div>
+          <div class="my-8 text-md">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+            </p>
+          </div>
+          <div class="footer-subscribe-form relative mt-5">
+            <input
+              class="p-3 relative"
+              class="font-normal text-gray-600 placeholder-gray-600 border-0 px-4 py-3 w-89%"
+              type="email"
+              name="email"
+              placeholder="Email Address"
+            />
+            <button
+              type="submit"
+              class="absolute top-1/2 transform -translate-y-1/2 right-9 bg-orange-500 text-white px-5 py-3"
+            >
+              <i class="bi bi-chevron-double-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright text-center text-white pb-6 mb-0 text-xl">
+        <span class="copyright-top block mb-5 mx-10"></span>
+        <span>
+          © Copyrights 2024
+          <a href="#" class="text-[#f68b21] underline px-1"> #####-IT </a> All
+          rights reserved.
+        </span>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+      });
+
+      const swiper2 = new Swiper(".swiper2", {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 30,
+
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".feature-button-next",
+          prevEl: ".feature-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
